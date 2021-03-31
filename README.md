@@ -17,7 +17,8 @@ Another problem that arises in the HMM is that given a sequence of observations,
 ## Implementaion
 
 In this project, I have implemented the Baum- Welch algorithm for optimizing the parameters of the model and used the model to generate texts of given length. 
-I model is trained on the play 'Hamlet' by Shakespear. The play has about 6000 unique words.
+I model is trained on the play 'Hamlet' by Shakespear. The play has about 6000 unique words. The model was trained with 7 latent variables, one may think of them as parts of speech in the english language, like verb, noun, etc. The model ran pretty fast it took about 30 sec to train the model.
+
 
 To predict a word following a given a sentence, I used the Viterbi algorithm. Using the algorithm, we find the best possible sequence of latent variables depending on the given words, and then the next latent variable is chosen from the transition probabilities, following which a word is chosen from its emmision probabilities.
 
